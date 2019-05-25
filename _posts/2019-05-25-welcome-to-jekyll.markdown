@@ -18,6 +18,14 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+Jekyll comes with a default theme called minima. The actual code is hidden in the gem by default. Run the below command to see the location of all the files:
+`bundle show minima`
+
+You can also generate links via markdown by doing the following:
+`[text][url]`
+
+**NOTE: the default layouts will map all root pages.md and index.md pages in directories. Add an underscore to remove a directory from this logic.**
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
