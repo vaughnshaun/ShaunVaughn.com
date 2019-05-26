@@ -1,0 +1,35 @@
+---
+layout: default
+title: Profile
+companies:
+    rockdove:
+        name: RockDove Solutions
+        description: Full stack development utilizing the .NET stack, docker, and the cloud.
+        meta: Crisis Management
+        logoUrl: rockdovelogo.jpg
+    Test:
+        name: Test
+        description: Full stack development utilizing the .NET stack, docker, and the cloud.
+        meta: Crisis Management
+        logoUrl: rockdovelogo.jpg
+---
+
+{%for company in page.companies%}
+    <div class="card">        
+        <div class="card-logo">
+            <img alt="Missing Company Logo" src="/assets/images/{{company[1].logoUrl}}" />
+        </div>
+        <div class="card-content">
+            <div class="card-content-header">
+                {{company[1].name}}
+            </div>
+            <div class="card-meta">
+                {{company[1].meta}}
+            </div>
+            
+            <p class="card-content-description">
+                {{company[1].description}}
+            </p>
+        </div>
+    </div>
+{%endfor%}
