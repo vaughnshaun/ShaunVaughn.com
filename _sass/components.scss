@@ -5,6 +5,7 @@
     padding-bottom: 5px;
     min-height: 110px;
     margin-bottom: 10px;
+    line-height: 1.2;
 
     .card-logo {
         float: left;
@@ -13,6 +14,9 @@
         height: 96px;
         position: relative;
         top: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: lightgray;
 
         img {
             width: 100%;
@@ -21,7 +25,7 @@
     }
 
     .card-content {
-        top: 4px;
+        top: 5px;
         position: relative;
 
         .card-content-header {
