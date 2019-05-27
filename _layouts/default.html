@@ -4,17 +4,30 @@
   {%- include head.html -%}
 
   <body>
+    <div class="body-inner">
+      {%- include header.html -%}
 
-    {%- include header.html -%}
+      {%-if page.id == 'index'-%}
+        <main class="page-content" aria-label="Content" {%if site.backgroundImage %}style="background-image: url('{{site.backgroundImage}}');"{%endif%}>
+          <div id="mission">
+            <div id="mission-statement">
+                {{content}}
+            </div>
+            <div id="mission-image-container">
+              <img src="{{site.indexImage}}" />
+            </div>
+          </div>
+        </main>
+      {%-else-%}
+        <main class="page-content" aria-label="Content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </main>
+      {%-endif-%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
-
+      {%- include footer.html -%}
+    </div>
   </body>
 
 </html>
