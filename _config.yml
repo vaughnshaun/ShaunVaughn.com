@@ -39,7 +39,7 @@ indexImage: "/assets/images/digitalabstract.png"
 missionTitle: "Striving to Teach While Learning"
 missionStatement: "My name is Shaun Vaughn. I am a computer engineer. I created this site to provide a wealth of knowledge in different areas of study."
 missionLinkText: "Learn Something!"
-missionNavigateTo: "/about"
+missionNavigateTo: "/categoryoverview"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

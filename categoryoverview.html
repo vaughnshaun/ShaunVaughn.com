@@ -1,0 +1,30 @@
+---
+layout: default
+categories:
+    - name: Software Engineering
+      imageUrl: categories/codes-coding-hacker.jpg
+      permalink: /softwareengineering_postlistings
+    - name: Books
+      imageUrl: categories/blur-books-close-up.jpg
+    - name: Math
+      imageUrl: categories/education-graphing-paper-homework.jpg
+    - name: Everyday Life
+      imageUrl: categories/asphalt-automobile-beach.jpg
+    - name: Science
+      imageUrl: categories/art-artistic-background.jpg
+---
+
+<div class="category-list">
+{%for category in page.categories%}
+    <div class="category-container" onclick="window.location='{{category.permalink}}'">        
+        <div class="category-image-container">
+            <img alt="Missing category image" src="/assets/images/{{category.imageUrl}}" />
+        </div>
+        <div class="category-content">
+            <div class="category-label">
+                {{category.name}}
+            </div>
+        </div>
+    </div>
+{%endfor%}
+</div>

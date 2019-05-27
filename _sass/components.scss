@@ -1,3 +1,8 @@
+@import "color-variables";
+
+$category-width: 256px;
+$category-height: 164px;
+
 /*Must call import in the styles.scss file*/
 .card {
     padding: 10px;
@@ -26,7 +31,7 @@
     }
 
     .card-content {
-        top: 5px;
+        top: 7px;
         position: relative;
 
         .card-content-header {
@@ -47,6 +52,7 @@
     &.card-shadow {
         box-shadow: 0px 0px 2px 1px rgba(0,0,0,.1);
         padding-left: 10px;
+        padding-bottom: 20px;
     }
 
     &::after {
@@ -54,4 +60,48 @@
         content: "";
         display: block;
     }
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-container {
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    width: $category-width;
+    min-height: $category-height + 20;
+    max-height: $category-height + 20;
+    margin-bottom: 10px;
+    transition: transform .5s;
+    cursor: pointer;
+
+    .category-image-container {
+        width: $category-width;
+        height: $category-height;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .category-content {
+        .category-label {
+            font-weight: bold;
+            text-align: center;
+            color: $black;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    /*&:hover ~ .category-container {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }*/
+
 }

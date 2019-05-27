@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="postlistings">
+{%for post in site.posts%}
+    {%if post.categories contains page.categories%}
+    <article class="post-preview">
+        <header class="post-preview-header">
+            <h2 class="post-preview-title" style="font-size: 24px;margin-bottom: 0px;">
+                <a href="{{post.permalink}}">
+                    {{post.title}}
+                </a>
+            </h2>
+        </header>
+        <div class="post-meta">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ post.date | date: date_format }}
+            </time>
+        </div>
+        <div class="post-preview-content">
+            {{post.description}}
+        </div>    
+    </article>
+    {%endif%}
+{%endfor%}

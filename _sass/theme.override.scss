@@ -1,4 +1,4 @@
-$max-width: 1800px;
+$max-width: 2000px;
 $divider-color: rgb(225, 225, 225);
 body {
     display: block;
@@ -42,7 +42,7 @@ body {
     }
     max-width: $max-width - 4;
     position: fixed;
-    z-index: 2;
+    z-index: 100;
     width: 100%;
     background: white;
 }
