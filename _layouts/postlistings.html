@@ -4,6 +4,8 @@ layout: default
 <div class="postlistings">
 {%for post in site.posts%}
     {%if post.categories contains page.categories%}
+    {%assign tags = post.tags | split: ","%}
+    {{post.tags | split: ","}}
     <article class="post-preview">
         <header class="post-preview-header">
             <h2 class="post-preview-title" style="font-size: 24px;margin-bottom: 0px;">
@@ -20,7 +22,12 @@ layout: default
         </div>
         <div class="post-preview-content">
             {{post.description}}
-        </div>    
+        </div>
+        <div class="tags">
+        {%for tag in tags%}
+            <span class="tag drop-shadow">{{tag | strip}}</span>
+        {%endfor%}
+        </div>
     </article>
     {%endif%}
 {%endfor%}

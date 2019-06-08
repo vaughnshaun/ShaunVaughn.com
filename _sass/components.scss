@@ -105,3 +105,15 @@ $category-height: 164px;
     }*/
 
 }
+
+.tags {
+    .tag {
+        font-size: 12px;
+        background: $lightgray;
+        color: $black;
+        padding: 5px;
+        border-radius: 2px;
+        display: inline;
+        margin-right: 4px;
+    }
+}

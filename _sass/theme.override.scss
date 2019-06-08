@@ -148,4 +148,10 @@ body {
             padding: 20px;
         }
     }
+
+    .post-preview-content {
+        max-height: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
