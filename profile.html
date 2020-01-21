@@ -1,0 +1,38 @@
+---
+layout: default
+title: Profile
+companies:
+    - name: RockDove Solutions
+      description: "Currently working with the .NET/.NET Core stack, docker, and the cloud. Developed many key applications: data analytics dashboard, import/export tools, and team collaboration applications."
+      meta: Crisis Management
+      logoUrl: rockdovelogo.jpg
+    - name: iConstituent
+      description: CRM developed using .NET stack. Developed reports, constituent mail and case work modules, and reusable UI components.
+      meta: Congressional CRM
+      logoUrl: iconstituentlogo.jpg
+    - name: Catalyst IT Services
+      description: Worked as a developer/consultant. Work consisted of onsite client meetings and software development. Developed many applications using a pleothra of technologies to meet clients' specifications.
+      meta: Software Consulting
+      logoUrl: catalystlogo.png
+---
+
+<h2>Experience</h2>
+{%for company in page.companies%}
+    <div class="card">        
+        <div class="card-logo">
+            <img alt="Missing Company Logo" src="/assets/images/{{company.logoUrl}}" />
+        </div>
+        <div class="card-content">
+            <div class="card-content-header">
+                {{company.name}}
+            </div>
+            <div class="card-meta">
+                {{company.meta}}
+            </div>
+            
+            <p class="card-content-description">
+                {{company.description}}
+            </p>
+        </div>
+    </div>
+{%endfor%}
